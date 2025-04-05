@@ -1,0 +1,841 @@
+/* ZERO */
+@font-face {
+  font-family: "Miss Katherine";
+  src: url("../fonts/Miss_Katherine-Script.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Golca";
+  src: url("../fonts/golca.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "The Antter";
+  src: url("../fonts/the-antter.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Zeferino One";
+  src: url("../fonts/ofont.ru_Zeferino One.ttf") format("truetype");
+}
+
+* {
+  z-index: 1;
+  user-select: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #939393;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* COMMON */
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.block-transparent {
+  background-color: transparent;
+  height: 700px;
+}
+
+.block-700 {
+  height: 660px;
+}
+
+.block-500 {
+  height: 500px;
+}
+
+.block-padding-top {
+  padding-top: 0px;
+}
+
+.block-padding-bottom {
+  padding-bottom: 60px;
+}
+
+.block-image {
+  background-image: url("../images/IMG_9443.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.content {
+  width: 320px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content > * {
+  width: 100%;
+}
+
+.content-max {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+/* SOUND BUTTON */
+.sound-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  z-index: 5;
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sound-button-icon {
+  width: 50%;
+  height: 50%;
+}
+
+/* HEADER BLOCK */
+.header-photo {
+  position: absolute;
+  height: 660px;
+  width: 100%;
+  z-index: 0;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+
+.header-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 110px;
+  line-height: 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 7%;
+  color: white;
+  text-shadow: #000 1px 0 16px;
+  flex-direction: column;
+}
+
+.header-title .date {
+    font-size: 70px;
+    font-family: "Zeferino One", sans-serif;
+}
+
+@media screen and (min-width: 900px) {
+  .header-title {
+    font-size: 100px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .header-title {
+    /* left: 10%; */
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header-title {
+    /* left: 20%; */
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .header-title {
+    /* left: 25%; */
+  }
+}
+
+/* INVITATION BLOCK */
+.invitation-title {
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.invitation-text {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Golca", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* INFO BLOCK */
+.info-month {
+  margin-top: 25px;
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 75px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.info-date {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.info-date-calendar {
+  font-family: "Golca", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  width: 250px;
+  height: 200px;
+}
+.scroll-down {
+  font-size: 32px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 40px;
+  animation: bounce 1.5s infinite;
+  color: white; /* Измени цвет под фон */
+  position: absolute;
+  bottom: 20px;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.info-date-day {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 64px;
+  left: 211px;
+  animation: heartbeat 2s infinite;
+  transform-origin: center center;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.375);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.info-photo {
+  width: 277px;
+  height: 383px;
+  filter: grayscale(100%);
+}
+
+.info-place {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Golca", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.info-place-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-place-title > img {
+  width: 70px;
+  height: 70px;
+}
+
+.info-place-text {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* SCHEDULE BLOCK */
+.schedule-title {
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 120px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.schedule-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.schedule-graph-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.schedule-graph-row-splitter {
+  height: 1px;
+  background-color: black;
+}
+
+.schedule-graph-point {
+  width: 1px;
+  height: 30px;
+  background-color: black;
+}
+
+.schedule-graph-icon > img {
+  width: 70px;
+  height: 70px;
+}
+
+.schedule-graph-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Golca", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.schedule-graph-block-time {
+  font-size: 24px;
+}
+
+/* WISHES BLOCK */
+.wishes-title {
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 120px;
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: -15px;
+}
+
+.wishes-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: left;
+  font-family: "Georgia", sans-serif;
+  font-weight: 500;
+}
+
+.wishes-item-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.wishes-item-text {
+  font-size: 16px;
+  width: 280px;
+}
+
+.wishes-item-text-right {
+  text-align: right;
+}
+
+.wishes-palette {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishes-palette-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.wishes-palette-circle-1 {
+  background-color: #ecafac;
+}
+
+.wishes-palette-circle-2 {
+  background-color: #f4b4c4;
+}
+
+.wishes-palette-circle-3 {
+  background-color: #f9b5a9;
+}
+
+.wishes-palette-circle-4 {
+  background-color: #ed9fae;
+}
+
+/* FORM BLOCK */
+.form-title {
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.form-question {
+  font-family: "Golca", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-question-description {
+  font-family: "Golca", sans-serif;
+  font-size: 13px;
+}
+
+.form-answer {
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: "Golca", sans-serif;
+  font-size: 14px;
+}
+
+.form-answer > input[name="children"] {
+  width: 50px;
+  height: 20px;
+  text-align: center;
+}
+
+.form-submit {
+  width: 128px;
+  height: 58px;
+  padding: 0 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Golca", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: white;
+  color: black;
+}
+
+.form-submit:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-submit-success {
+  color: white;
+  background-color: #62c584;
+  cursor: default;
+}
+
+.form-submit-success:hover {
+  background-color: #62c584;
+}
+
+.form-submit-error {
+  color: white;
+  background-color: #ed9fae;
+  cursor: default;
+}
+
+.form-submit-error:hover {
+  background-color: #ed9fae;
+  color: black;
+}
+
+/* TIMER BLOCK */
+.timer-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 40px 0;
+  text-shadow: #000 1px 0 16px;
+}
+
+.timer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Golca", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-shadow: #000 1px 0 16px;
+  margin-top: 70px;
+}
+
+.timer-clock {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  text-shadow: #000 1px 0 16px;
+}
+
+.timer-clock-splitter {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: #000 1px 0 16px;
+}
+
+.timer-clock-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Golca", sans-serif;
+  color: white;
+  text-shadow: #000 1px 0 16px;
+}
+
+.timer-clock-block-digit {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.timer-clock-block-description {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 950px) {
+  .timer-container {
+    justify-content: center;
+  }
+
+  .timer-clock {
+    gap: 13px;
+  }
+
+  .timer-clock-block-digit {
+    font-size: 30px;
+  }
+
+  .timer-clock-block-description {
+    font-size: 14px;
+  }
+}
+
+/* FOOTER BLOCK */
+.footer-title {
+  font-family: "Miss Katherine", sans-serif;
+  font-size: 90px;
+  margin-top: 20px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: "Golca", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link > img {
+  width: 36px;
+  height: 36px;
+}
+
+.program {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-family: "Georgia", serif;
+}
+
+.program-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.program-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.program-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.program-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.program-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.program-item:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.time {
+  margin-top: 7px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.icon {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  flex: 1;
+}
+
+.info .title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.info .desc {
+  color: #555;
+  font-size: 16px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.geo {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.geo-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.geo a {
+  color: #444;
+  text-decoration: none;
+}
+
+.geo a:hover {
+  text-decoration: underline;
+  color: #c09; /* немного романтики :) */
+}
+
+.geo-card {
+  margin-left: -15px;
+  margin-top: 10px;
+  padding: 0px 2px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #444;
+}
+
+.geo-icon-wrapper {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.geo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.geo-text a {
+  color: #444;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.geo-text a:hover {
+  color: #b06a83;
+  text-decoration: underline;
+}
+
+.geo-text a {
+  color: #444;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.geo-text a:hover {
+  color: #b06a83;
+  text-decoration: underline;
+}
+
+.program-item.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.program-item.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Добавим задержку для каждого следующего элемента, чтобы они появлялись последовательно */
+.program-item.fade-in:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.program-item.fade-in:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.program-item.fade-in:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.confirm-presence-block {
+  text-align: center;
+  margin: 50px auto;
+  padding: 30px 20px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.confirm-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.confirm-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #030302; /* Можно заменить на основной цвет вашей свадебной палитры */
+  position: relative;
+  display: inline-block;
+}
+
+/* Дополнительное декоративное подчеркивание для выделенного текста */
+.highlight:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000; /* То же, что и цвет текста */
+  opacity: 0.5;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-name {
+  min-width: 100px; /* Можно регулировать эту ширину */
+  display: inline-block;
+}
+
+.contact-phone {
+  margin-left: 15px;
+}
+.header-title {
+    opacity: 0; /* Начальное состояние - невидим */
+    transform: translateY(-20px); /* Начальная позиция, немного выше */
+    animation: fadeInUp 3s ease-out forwards; /* Анимация с эффектом плавного подъема */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

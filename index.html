@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="public/images/favicon.png" />
+    <link rel="stylesheet" href="public/styles/invitation.css" />
+
+    <script src="public/scripts/jquery-3.7.1.min.js" defer></script>
+    <script src="public/scripts/guests.js" defer></script>
+    <script src="public/scripts/hider.js" defer></script>
+    <script src="public/scripts/invitation.js" defer></script>
+    <script src="public/scripts/music.js" defer></script>
+    <script src="public/scripts/timer.js" defer></script>
+    <script src="public/scripts/functions.js" defer></script>
+    <script src="public/scripts/names.js" defer></script>
+
+    <title>Приглашение на свадьбу</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sound-button">
+        <img
+          class="sound-button-icon"
+          src="public/images/sound-icon.png"
+          alt=""
+        />
+        <audio id="music">
+          <source src="public/music/christina-perri_a-thousand-years.mp3" />
+        </audio>
+      </div>
+      <div class="block block-transparent block-700">
+        <img class="header-photo" src="public/images/IMG_9512.PNG" alt="" />
+        <div class="content content-max">
+          <div class="header-title">
+            Артём и Ольга<br />
+            
+            <span class="date"> 09.08.2025</span>
+          </div>
+          
+        </div>
+        <div class="scroll-down" onclick="scrollToNextBlock()">
+          <svg
+            role="presentation"
+            class="t-cover__arrow-svg"
+            style="fill: #ffffff"
+            x="0px"
+            y="0px"
+            width="38.417px"
+            height="18.592px"
+            viewBox="0 0 38.417 18.592"
+          >
+            <g>
+              <path
+                d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="block">
+        <div class="content">
+          <div class="invitation-title" id="invitation"></div>
+          <div id="name" class="info-month">Дорогие, username!</div>
+          <div class="invitation-text">
+            Приглашаем вас разделить радость этого особенного для нас события и
+            стать частью начала нашей семейной истории!
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="content">
+          <div class="info-month">Август</div>
+          <div class="info-date">
+            <table class="info-date-calendar">
+              <tr>
+                <th>ПН</th>
+                <th>ВТ</th>
+                <th>СР</th>
+                <th>ЧТ</th>
+                <th>ПТ</th>
+                <th>СБ</th>
+                <th>ВС</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+              </tr>
+            </table>
+            <img
+              class="info-date-day"
+              src="public/images/heart-icon.png"
+              alt=""
+            />
+          </div>
+          <!-- <div class="info-place" id="location">
+            <div class="info-place-title">
+              <img src="public/images/geo-icon.png" alt="" />
+              <div>Место проведения</div>
+            </div>
+            <div class="info-place-text">
+              <a href="https://go.2gis.com/cc9thi" target="_blank">
+                ул. Николая Фёдорова, д. 9
+                <br />
+                Green House
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="block block-padding-top" id="time">
+        <div class="content">
+          <div class="program">
+            <div class="schedule-title" style="margin-bottom: 50px">
+              Программа дня
+            </div>
+
+            <div class="program-item fade-in">
+              <div class="time">16:30</div>
+              <div class="info">
+                <div class="title">Торжественная церемония бракосочетания</div>
+                <div class="desc">Самое важное "да" в нашей жизни</div>
+                <div class="geo-card">
+                  <img
+                    src="public/images/geo-icon.png"
+                    class="geo-icon"
+                    alt=""
+                  />
+                  <div class="geo-text">
+                    <a href="https://go.2gis.com/y09na" target="_blank">
+                      Дворец бракосочетания,<br />
+                      ул. Малыгина, д. 85, г. Тюмень
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="program-item fade-in">
+              <div class="time">18:00</div>
+              <div class="info">
+                <div class="title">Праздничный банкет</div>
+                <div class="desc">
+                  Праздничное меню, шумные тосты и головокружительные танцы
+                </div>
+                <div class="geo-card">
+                  <img
+                    src="public/images/geo-icon.png"
+                    class="geo-icon"
+                    alt=""
+                  />
+                  <div class="geo-text">
+                    <a href="https://go.2gis.com/9lSF8" target="_blank">
+                      Ресторан 15/86, Банкет-холл River Park<br />
+                      ул. Володарского, д. 3, 2 этаж, г. Тюмень
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="program-item fade-in">
+              <div class="time">00:00</div>
+              <div class="info">
+                <div class="title">Прощаемся, но не надолго...</div>
+                <div class="desc">
+                  Приглашаем на второй день! Мы сняли домик за городом, чтобы
+                  поделится впечатлениями о свадьбе, и побыть вместе чуточку
+                  больше!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="schedule-title">Программа дня</div>
+          <div class="schedule-graph">
+            <div class="schedule-graph-row">
+              <div class="schedule-graph-icon">
+                <img src="public/images/geo-icon.png" alt="" />
+              </div>
+              <div class="schedule-graph-block">
+                <div>Церемония</div>
+                <div class="schedule-graph-block-time">18:30</div>
+              </div>
+              <div class="schedule-graph-icon">
+                <img src="public/images/banquet-icon.png" alt="" />
+              </div>
+            </div>
+            <div class="schedule-graph-row schedule-graph-row-splitter">
+              <div class="schedule-graph-point"></div>
+              <div class="schedule-graph-point"></div>
+              <div class="schedule-graph-point"></div>
+            </div>
+            <div class="schedule-graph-row">
+              <div class="schedule-graph-block">
+                <div class="schedule-graph-block-time">18:00</div>
+                <div>Сбор гостей</div>
+              </div>
+              <div class="schedule-graph-icon">
+                <img src="public/images/wedding-icon.png" alt="" />
+              </div>
+              <div class="schedule-graph-block">
+                <div class="schedule-graph-block-time">19:30</div>
+                <div>Банкет</div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="block block-padding-top">
+        <div class="content" style="margin-bottom: 50px;">
+          <div class="wishes-title">Детали</div>
+          <div class="wishes-item">
+            <div class="wishes-item-title">Дресс-код</div>
+            <div class="wishes-item-text">
+              Рады сообщить, что дресс-кода на нашей свадьбе не будет, тем не
+              менее, мы просим вас воздержаться от ярких цветов и броских
+              принтов.<br />
+              <br />
+              Нам будет приятно, если вы отдадите предпочтение нейтральным и
+              спокойным оттенкам в своих нарядах. <br />
+              <br />
+              Милые дамы, также будем благодарны, если в этот день белый
+              останется привелегией невесты.<br />
+            </div>
+          </div>
+          <div class="wishes-item">
+            <div class="wishes-item-title">Подарки</div>
+            <div class="wishes-item-text">
+              Приносите с собой веселье и радость в душе, а подарки — в
+              конверте.
+            </div>
+          </div>
+          <div class="wishes-item">
+            <div class="wishes-item-title">Цветы</div>
+            <div class="wishes-item-text">
+              Поскольку сразу после торжества мы отправляемся в свадебное
+              путешествие, нам не удастся в полной мере насладиться красотой и
+              ароматам цветов<br /><br />
+
+              Если вы планировали подарить букет, приятной альтернативой для нас
+              будет сертификат - например, золотое яблоко, летуаль
+            </div>
+          </div>
+          <div class="wishes-item">
+            <div
+              class="wishes-title"
+              style="
+                margin-top: 50px;
+                margin-bottom: 40px;
+                font-size: 95px;
+                line-height: 50px;
+              "
+            >
+              Подтвердите своё присутствие
+            </div>
+            <!-- <div class="wishes-item-title">Подтвердите свое присутствие</div> -->
+            <div class="wishes-item-text">
+              Как на первом, так и на втором дне не позднее
+              <span class="highlight">09.07.2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block block-transparent block-500 block-image">
+        <div class="content">
+          <div class="timer-container">
+            <div class="timer-title">
+              Будем очень рады<br />видеть на торжестве<br /><br />через...
+            </div>
+            <div class="timer-clock">
+              <div class="timer-clock-block">
+                <div class="timer-clock-block-digit" id="timer-days">30</div>
+                <div class="timer-clock-block-description">Дней</div>
+              </div>
+              <div class="timer-clock-splitter">&nbsp;</div>
+              <div class="timer-clock-block">
+                <div class="timer-clock-block-digit" id="timer-hours">13</div>
+                <div class="timer-clock-block-description">Часов</div>
+              </div>
+              <div class="timer-clock-splitter">&nbsp;</div>
+              <div class="timer-clock-block">
+                <div class="timer-clock-block-digit" id="timer-minutes">48</div>
+                <div class="timer-clock-block-description">Минут</div>
+              </div>
+              <div class="timer-clock-splitter">&nbsp;</div>
+              <div class="timer-clock-block">
+                <div class="timer-clock-block-digit" id="timer-seconds">00</div>
+                <div class="timer-clock-block-description">Секунд</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block block-padding-top block-padding-bottom">
+        <div class="content">
+          <div class="footer-title">Контакты</div>
+          <div class="footer-contacts">
+            <div class="footer-text">
+              <span class="contact-name">Артём</span>
+              <a class="contact-phone" href="tel:+79126399095">+7 (912) 639-90-95</a>
+            </div>
+            <div class="footer-text">
+              <span class="contact-name">Ольга</span>
+              <a class="contact-phone" href="tel:+79821303697">+7 (982) 130-36-97</a>
+            </div>
+            <div class="footer-text">
+              <span class="contact-name">Координатор</span>
+              <a class="contact-phone" href="tel:+79639531333">+7 (963) 953-13-33</a>
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
