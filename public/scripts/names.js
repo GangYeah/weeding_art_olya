@@ -1,5 +1,5 @@
 const users = {
-    'tetyazina': {
+    '38c55423e123aca445982dfd897a552d': {
         name: 'Тетя Зина',
         many: false
     }
