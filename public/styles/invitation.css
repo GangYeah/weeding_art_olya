@@ -74,10 +74,17 @@ a {
   padding-bottom: 60px;
 }
 
-.block-image {
-  background-image: url("../images/IMG_9443.jpg");
-  background-size: cover;
-  background-position: top;
+.image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/IMG_9630.jpg");
+  background-size: 387px 844px;
+  background-position: 0px -136px;
+  z-index: 0;
+  filter: brightness(80%);
 }
 
 .content {
@@ -142,7 +149,6 @@ a {
   object-position: 0 0;
 }
 
-
 .header-title {
   display: flex;
   text-align: center;
@@ -159,8 +165,8 @@ a {
 }
 
 .header-title .date {
-    font-size: 70px;
-    font-family: "Zeferino One", sans-serif;
+  font-size: 70px;
+  font-family: "Zeferino One", sans-serif;
 }
 
 @media screen and (min-width: 900px) {
@@ -199,9 +205,9 @@ a {
 .invitation-text {
   text-transform: uppercase;
   text-align: center;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 13px;
-  font-weight: 700;
+  margin-top: 10px;
 }
 
 /* INFO BLOCK */
@@ -220,7 +226,7 @@ a {
 }
 
 .info-date-calendar {
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 16px;
   text-align: center;
   width: 250px;
@@ -280,7 +286,7 @@ a {
   gap: 15px;
   align-items: center;
   justify-content: center;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 13px;
   text-transform: uppercase;
 }
@@ -345,7 +351,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
@@ -426,7 +432,7 @@ a {
 }
 
 .form-question {
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 18px;
   font-weight: 700;
   display: flex;
@@ -435,14 +441,14 @@ a {
 }
 
 .form-question-description {
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 13px;
 }
 
 .form-answer {
   margin-top: 5px;
   cursor: pointer;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 14px;
 }
 
@@ -462,7 +468,7 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 16px;
   font-weight: 700;
   background-color: white;
@@ -511,11 +517,10 @@ a {
   justify-content: center;
   text-align: center;
   color: white;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   font-size: 26px;
-  font-weight: 700;
   text-shadow: #000 1px 0 16px;
-  margin-top: 70px;
+  margin-top: 265px;
 }
 
 .timer-clock {
@@ -524,6 +529,8 @@ a {
   align-items: center;
   justify-content: center;
   text-shadow: #000 1px 0 16px;
+  position: relative;
+  top: -16px;
 }
 
 .timer-clock-splitter {
@@ -538,7 +545,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Golca", sans-serif;
+  font-family: "Georgia", serif;
   color: white;
   text-shadow: #000 1px 0 16px;
 }
@@ -562,11 +569,11 @@ a {
   }
 
   .timer-clock-block-digit {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .timer-clock-block-description {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -823,19 +830,18 @@ a {
   margin-left: 15px;
 }
 .header-title {
-    opacity: 0; /* Начальное состояние - невидим */
-    transform: translateY(-20px); /* Начальная позиция, немного выше */
-    animation: fadeInUp 3s ease-out forwards; /* Анимация с эффектом плавного подъема */
+  opacity: 0; /* Начальное состояние - невидим */
+  transform: translateY(-20px); /* Начальная позиция, немного выше */
+  animation: fadeInUp 3s ease-out forwards; /* Анимация с эффектом плавного подъема */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
