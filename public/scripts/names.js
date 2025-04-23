@@ -22,5 +22,5 @@ const users = {
 $(document).ready(function () {
     const guestName = (new URL(document.location)).searchParams.get('name')
     const guest = users[guestName];
-    document.getElementById('name').textContent = (guest.many ? 'Дорогие ' : sex ? 'Дорогой ' : 'Дорогая ') + guest.name  + '!';
+    document.getElementById('name').textContent = (guest.many ? 'Дорогие ' : guest.sex ? 'Дорогой ' : 'Дорогая ') + guest.name  + '!';
 });
