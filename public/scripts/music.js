@@ -5,3 +5,6 @@ $('.sound-button').click(function () {
 
   $(this).hide();
 });
+const music = $('#music')[0];
+music.volume = 0.4;
+music.play();
