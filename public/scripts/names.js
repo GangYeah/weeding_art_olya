@@ -38,6 +38,5 @@ const users = {
 $(document).ready(function () {
     const guestName = (new URL(document.location)).searchParams.get('name')
     const guest = users[guestName];
-    console.log(guest);
     document.getElementById('name').textContent = (!guest.respect ? '' : (guest.many ? 'Дорогие ' : guest.sex ? 'Дорогой ' : 'Дорогая ')) + guest.name  + '!';
 });
