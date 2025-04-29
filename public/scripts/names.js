@@ -17,6 +17,22 @@ const users = {
     '1ec8f91b145146e88c9b56b63c3912b5': { name: 'Дарья', many: false, sex: false },
     '6582a55c274944bfb37eaa0c26c37698': { name: 'Алексей и Валерия', many: true },
     '0a7e3f38c9e5446cb7c4ea3145c2bfc3': { name: 'Леонид и Дарья', many: true },
+    // artem
+    '3f6f732d325c4aa381fb8c7c1861dbf0': { name: 'Мама, папа и Брат Максим', many: true },
+    'a1243c7fc79f486d84ed93d58bde215a': { name: 'Бабушка', many: false, sex: false },
+    '7307a4b9d8cf4490a431403f93f02c5b': { name: 'Валерий, Ирина, Сергей, Алексей', many: true },
+    '69d1a7d5eac34cc9a3f7825608a13c5f': { name: 'Николай и Анастасия', many: true },
+    'f20a51b2d4c5430492a989c1653a9f4f': { name: 'Павел и Надежда', many: true },
+    '2ce7290610024bcb85103cabc2785704': { name: 'Тетя Люда', many: false, sex: false },
+    '0a93d0e0fda84857b6f9a21f378a9802': { name: 'Тетя Зина', many: false, sex: false },
+    '94e86ff5391a4db1b1a3a154a94d17df': { name: 'Павел и Наталья', many: true },
+    'af2f0ae0130c41868c1be2b7fe2e63cc': { name: 'Александр и Юлия', many: true },
+    '8c38d8126b5e4cc697c46ea0a00f8e5b': { name: 'Евгения Алексеевна', many: false },
+    '13bd4e9b1d8e4432a539d8b23e5c24e4': { name: 'Виталий и Эльвира', many: true },
+    'a96c80898dbf4f01b27ab83b1e87ed71': { name: 'Вадим', many: false, sex: true },
+    '5c2cda540bd64c3b84d03a94f688c0ec': { name: 'Даниил', many: false, sex: true },
+    '2c4035e9bfea49f59a58b69a13e36a11': { name: 'Григорий', many: false, sex: true },
+    '2b72fd84638f4b2a827f355e56c6ab45': { name: 'Александр', many: false, sex: true },
 };
 
 $(document).ready(function () {
