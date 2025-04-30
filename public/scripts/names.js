@@ -33,6 +33,7 @@ const users = {
     '5c2cda540bd64c3b84d03a94f688c0ec': { name: 'Даниил', many: false, sex: true, respect: false },
     '2c4035e9bfea49f59a58b69a13e36a11': { name: 'Григорий', many: false, sex: true, respect: false },
     '2b72fd84638f4b2a827f355e56c6ab45': { name: 'Александр', many: false, sex: true, respect: false },
+    '0a93d0e0fda84857b6f9a21f378a9ju2': { name: 'Виталий', many: false, sex: true, respect: true },
 };
 
 $(document).ready(function () {
