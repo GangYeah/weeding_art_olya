@@ -17,6 +17,7 @@ const users = {
     '1ec8f91b145146e88c9b56b63c3912b5': { name: 'Дарья', many: false, sex: false, respect: true},
     '6582a55c274944bfb37eaa0c26c37698': { name: 'Алексей и Валерия', many: true, respect: true },
     '0a7e3f38c9e5446cb7c4ea3145c2bfc3': { name: 'Леонид и Дарья', many: true, respect: true },
+    '0a7e3f38c9e5446cb7c4eag145c2bfc3': { name: 'Андрей и Марина', many: true, respect: true },
     // artem
     '3f6f732d325c4aa381fb8c7c1861dbf0': { name: 'Мама, папа и Брат Максим', many: true, respect: true },
     'a1243c7fc79f486d84ed93d58bde215a': { name: 'Бабушка', many: false, sex: false, respect: true },
