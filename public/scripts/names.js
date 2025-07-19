@@ -30,6 +30,7 @@ const users = {
     'af2f0ae0130c41868c1be2b7fe2e63cc': { name: 'Александр и Юлия', many: true, respect: false },
     '8c38d8126b5e4cc697c46ea0a00f8e5b': { name: 'Евгения Алексеевна', many: false, respect: false },
     '13bd4e9b1d8e4432a539d8b23e5c24e4': { name: 'Виталий и Эльвира', many: true, respect: false },
+    '13bd4e9b1d8e4432a539d8b23e5cd4e4': { name: 'Дмитрий и Эльвира', many: true, respect: false },
     'a96c80898dbf4f01b27ab83b1e87ed71': { name: 'Вадим', many: false, sex: true, respect: false },
     '5c2cda540bd64c3b84d03a94f688c0ec': { name: 'Даниил', many: false, sex: true, respect: false },
     '2c4035e9bfea49f59a58b69a13e36a11': { name: 'Григорий', many: false, sex: true, respect: false },
